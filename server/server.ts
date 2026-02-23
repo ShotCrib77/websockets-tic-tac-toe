@@ -2,7 +2,7 @@ import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import next from "next";
-import { createGameState, handleClick, handlePlayAgain, GameState } from "./tictactoe";
+import { createGameState, handleClick, handlePlayAgain, GameState } from "./tictactoe.js";
 
 const dev = process.env.NODE_ENV !== "production";
 const nextApp = next({ dev });
