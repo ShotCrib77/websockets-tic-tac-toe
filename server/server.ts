@@ -123,6 +123,6 @@ app.all("/socket.io/{*path}", (req, res, next) => {
 })
 app.all("/{*path}", (req, res) => handle(req, res))
 
-httpServer.listen(3000, () => {
-    console.log("Server running on http://localhost:3000")
+httpServer.listen(4000, () => {
+    console.log("Server running on http://localhost:4000")
 })
