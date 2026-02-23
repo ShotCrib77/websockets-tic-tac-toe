@@ -57,7 +57,7 @@ export default function Home() {
 
         socket.on("roomCreated", (data: { roomId: string }) => {
             console.log("ROOM ID: ", data.roomId);
-            setGameLink(`http://192.168.0.202:3000/game/${data.roomId}`);
+            setGameLink(`${window.location.origin}/game/${data.roomId}`);
         });
 
         return () => {
