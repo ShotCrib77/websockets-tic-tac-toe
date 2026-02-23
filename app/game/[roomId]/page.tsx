@@ -127,7 +127,7 @@ export default function Home() {
             {(winner || disconnect) &&
                 <div className="fixed top-0 left-0 w-full h-full bg-[#000000b6] flex flex-col justify-center items-center gap-4">
                     <span className="text-5xl text-white z-50">{disconnect ? `${symbol === "X" ? "O" : "X"} dissconected ${symbol} won!` : winner === "draw" ? "Draw" :  `${winner} won!` }</span>
-                    { !disconnect ? <PlayAgain handlePlayAgain={handlePlayAgainClick} /> : <Link href="/">←</Link> }
+                    { !disconnect ? <PlayAgain handlePlayAgain={handlePlayAgainClick} /> : <Link href="/">Home</Link> }
                 </div>
             }
         </main>
