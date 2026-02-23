@@ -99,15 +99,15 @@ export default function Home() {
     }
 
     return (
-        <main className="relative flex flex-col gap-4 justify-center items-center min-h-screen bg-white">
+        <main className="relative flex flex-col gap-4 justify-center items-center min-h-screen">
 
             {(waiting && !disconnect) ? ( 
-                <div className="text-3xl text-black flex ">
+                <div className="text-3xl flex ">
                     <span className="mr-2">Waiting for player 2</span> <LoadingDots /> 
                 </div> 
             ) :
             (
-                <div className="text-black flex flex-col justify-center items-center gap-2">
+                <div className="flex flex-col justify-center items-center gap-2">
                     <span className="mr-2 text-3xl">{`Player ${turn}'s turn`}</span>
                     <span className="mr-2 text-2xl">{`You're ${symbol}'s`}</span>
                 </div> 
@@ -127,7 +127,7 @@ export default function Home() {
             {(winner || disconnect) &&
                 <div className="fixed top-0 left-0 w-full h-full bg-[#000000b6] flex flex-col justify-center items-center gap-4">
                     <span className="text-5xl text-white z-50">{disconnect ? `${symbol === "X" ? "O" : "X"} dissconected ${symbol} won!` : winner === "draw" ? "Draw" :  `${winner} won!` }</span>
-                    <PlayAgain handlePlayAgain={handlePlayAgainClick}/>
+                    { !disconnect ? <PlayAgain handlePlayAgain={handlePlayAgainClick} /> : <Link href="/">←</Link> }
                 </div>
             }
         </main>
