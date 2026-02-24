@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md"
 
 export default function Footer() {
     return (
-        <footer className="bg-[#323A45] pt-24 pb-12 flex flex-col font-mono gap-16 bottom-0 text-background">
+        <footer className="bg-[#323A45] pt-24 pb-12 flex flex-col font-mono gap-16 bottom-0 text-white">
             <div className="mx-auto flex flex-col gap-12">
                 <div className="text-center">
                     <h2 className="text-xl">CONNECT WITH ME</h2>
