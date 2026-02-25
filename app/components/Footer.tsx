@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { MdEmail } from "react-icons/md"
 
 export default function Footer() {
@@ -20,9 +21,7 @@ export default function Footer() {
                 <hr />
                 <div className="flex justify-between">
                     <span>©2026 ShotCrib</span>
-                    <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                        Home
-                    </button>
+                    <Link href="https://shotcrib.com">Home</Link>
                 </div>
             </div>
         </footer>
